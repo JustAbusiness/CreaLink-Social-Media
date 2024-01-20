@@ -21,7 +21,7 @@ function SearchUserResult({ searchParams }: { searchParams: { [key: string]: str
       const token = session?.user?.accessToken;
 
       try {
-        const response = await fetch(`http://54.169.199.32:5000/api/user/search-user?searchQuery=${searchParams?.query}`, {
+        const response = await fetch(`https://54.169.199.32:5000/api/user/search-user?searchQuery=${searchParams?.query}`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function SearchUserResult({ searchParams }: { searchParams: { [key: string]: str
                     <p> {user.name} </p>
                     <span>
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns="https://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={2}

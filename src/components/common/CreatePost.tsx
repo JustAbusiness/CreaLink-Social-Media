@@ -132,7 +132,7 @@ const CreatePost: React.FC = () => {
       formData.append('content', postState.content);
 
       // Send POST request with form data
-      const response = await axios.post('http://54.169.199.32:5000/api/feed/post', formData, {
+      const response = await axios.post('https://54.169.199.32:5000/api/feed/post', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,
@@ -196,7 +196,7 @@ const CreatePost: React.FC = () => {
         }}
       />
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="https://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
