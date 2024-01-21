@@ -1,11 +1,11 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import homeIcon from '@/public/assets/icons/Home Icon.svg';
-import searchIcon from '@/public/assets/icons/Search Icon.svg';
-import heartIcon from '@/public/assets/icons/Heart Icon.svg';
+import homeIcon from '@/assets/icons/Home Icon.svg';
+import searchIcon from '@/assets/icons/Search Icon.svg';
+import heartIcon from '@/assets/icons/Heart Icon.svg';
 // import messageIcon from '@/public/assets/icons/Message Icon.svg';
-import notificationIcon from '@/public/assets/icons/Notification Icon.svg';
-import userIcon from '@/public/assets/icons/User Icon.svg';
+import notificationIcon from '@/assets/icons/Notification Icon.svg';
+import userIcon from '@/assets/icons/User Icon.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSession } from 'next-auth/react';
