@@ -20,6 +20,7 @@
     import { CopyIcon } from 'lucide-react';
     import ToggleLike, { handleLikeToggle } from './ToggleLike';
 import { EllipsisOutlined } from '@ant-design/icons';
+    // import { EllipsisOutlined } from '@ant-design/icons';
     const { Dropdown, Menu, Flex } = require('antd');
     const { useSession } = require('next-auth/react');
     // import axios, { AxiosError } from 'axios';
@@ -361,11 +362,7 @@ import { EllipsisOutlined } from '@ant-design/icons';
                     <div className="dropdown-menu ml-2">
                         {/* Dropdown component */}
                         <Dropdown overlay={menu} placement="bottomRight">
-                        {/* <img
-                            className="w-30 h-22 object-cover"
-                            alt="Div margin"
-                            src="https:c.animaapp.com/n1QiTcNd/img/div-x146dn1l-margin-1.png"
-                        /> */}
+                    
                         <EllipsisOutlined />
                         </Dropdown>
                     </div>
