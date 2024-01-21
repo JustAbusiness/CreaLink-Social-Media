@@ -97,15 +97,6 @@
         setIsModalOpen(false);
       };
 
-    // const [isCommentModalOpen, setCommentModalOpen] = useState(false);
-
-    // const openCommentModal = () => {
-    //     setCommentModalOpen(true);
-    // };
-
-    // const closeCommentModal = () => {
-    //     setCommentModalOpen(false);
-    // };
 
 
     const apiUrl = `https://crealink.khangtgr.com/api/feed/posts?page=${page}`;
@@ -153,7 +144,8 @@
         try {
         setLoadingMore(true);
 
-        const response = await axios.get(apiUrl, {
+        const nextPage = page + 1;
+        const response = await axios.get(`https://crealink.khangtgr.com/api/feed/posts?page=${nextPage}`, {
             headers: {
             Authorization: `Bearer ${session.user?.accessToken}`,
             'Content-Type': 'application/json',
@@ -163,7 +155,9 @@
         // Assuming that your API returns a 'posts' property in the response data
         const newData = response.data.posts;
 
-        setPosts(prevPosts => [...prevPosts, ...newData]);
+  
+        setPosts((prevPosts) => [...prevPosts, ...newData]);
+        setPage(nextPage);
         } catch (error) {
         console.error('Error loading more posts:', error);
         } finally {
@@ -493,19 +487,19 @@
                     </div>
                 </div>
                 ))}
-            {loadingMoreButton && (
-                <Flex gap="large" vertical align="center" wrap="wrap">
-                <Button
-                    style={{ background: '#a2383a', color: 'white' }}
-                    loading={loadingMore}
-                    onClick={enterLoading}
-                    className="border-none text-white w-30 h-8 ml-[20%]"
-                >
-                    Loading more
-                </Button>
-                </Flex>
-            )}
-            </>
+        {loadingMoreButton && (
+            <Flex gap="large" vertical align="center" wrap="wrap">
+            <Button
+                style={{ background: '#a2383a', color: 'white' }}
+                loading={loadingMore}
+                onClick={enterLoading}
+                className="border-none text-white w-30 h-8 ml-[20%]"
+            >
+                Loading more
+            </Button>
+            </Flex>
+        )}
+        </>
         )}
         </div>
     );

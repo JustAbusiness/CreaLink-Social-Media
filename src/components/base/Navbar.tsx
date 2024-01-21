@@ -63,7 +63,7 @@ function Navbar() {
       {antIcons.map((AntIcon, index) => (
         <Link key={index} href={hrefs[index]} passHref>
           <div className="flex flex-col items-center cursor-pointer">
-            <AntIcon style={{ fontSize: '24px' }} />
+            <AntIcon style={{ fontSize: '30px', color:'#A20103' }} />
             {index === 3 && hasNotifications && (
               <span className="relative flex h-3 w-3 bottom-9 left-1">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-700 opacity-75"></span>

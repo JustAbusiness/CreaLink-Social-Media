@@ -19,7 +19,7 @@ function BaseComponent({ children }: { children: React.ReactNode }) {
         <div className="flex justify-between items-center">
           <div className="flex justify-evenly w-full items-baseline mt-4 mr-3">
             <Link href="/home" className="px-3 my-2">
-              <Image src="assets/icons/Logo Icon.svg" alt="homepage" width={50} height={50} />
+              <Image src="/assets/icons/Group 2.png" alt="homepage" width={40} height={50} />
             </Link>
             <div className="flex-grow flex justify-center text-red-100">
               <Suspense fallback={<Loading />}>

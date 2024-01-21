@@ -64,15 +64,18 @@ function Login() {
   return (
     <div className="bg-background">
       <div className=" h-screen w-screen grid place-items-center">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mr-[5%]">
           <Image
-            src="/assets/images/banner.svg"
+            src="/assets/icons/Group 2.png"
             className="overflow-hidden pl-20"
-            width={600}
-            height={300}
+            width={200}
+            height={250}
             priority
             alt="Logo"
           />
+        <div>
+          <h2 className="text-[80px] font-bold">CreaLink</h2>
+        </div>
         </div>
         <div className="w-full mx-2 md:w-1/3 md:mx-0 sm:w-2/4 bg-muted p-6 rounded-lg mb-20">
           {/* {params.get('message') ? (

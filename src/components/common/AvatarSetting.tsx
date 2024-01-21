@@ -22,7 +22,7 @@ function AvatarSetting() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className="outline-none border-none">
-          <Image src="assets/icons/Right Infos.svg" alt="setting" width={30} height={30} />
+          <Image src="/assets/icons/Righ Infos.png" alt="setting" width={30} height={30} />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">

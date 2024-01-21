@@ -15,12 +15,12 @@ function HelpCenterComponent({ children }: { children: React.ReactNode }) {
           <div className="flex items-stat gap-3">
             <Link href="/home" className="px-3 my-2">
             <Image
-              src="/assets/icons/Logo Icon.svg"
+              src="/assets/icons/Group 2.png"
               typeof="image/svg"
               quality={100}
               loading="lazy"
               alt="logo"
-              width={50}
+              width={40}
               height={40}
             />
             </Link>
