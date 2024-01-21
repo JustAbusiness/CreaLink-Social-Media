@@ -52,7 +52,7 @@ function Navbar() {
 
     const pollingInterval = setInterval(() => {
       fetchNotifications();
-    }, 5000);
+    }, 2000);
 
     // Cleanup interval on component unmount
     return () => clearInterval(pollingInterval);
