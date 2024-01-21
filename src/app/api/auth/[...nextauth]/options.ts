@@ -1,7 +1,7 @@
 import { AuthOptions, ISODateString, User } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-// import axios from 'axios';
-const axios = require('axios');
+import axios from 'axios';
+// const axios = require('axios');
 import { JWT } from 'next-auth/jwt';
 
 export interface CustomSession {
@@ -65,5 +65,5 @@ export const authOptions: AuthOptions = {
       return session;
     },
   },
-  secret: "khangwibu",
+  secret: process.env.NEXTAUTH_SECRET || 'D/muCBvAc/dS/qclDJcq7i3OQNT9MvB6cmO/P459tFY=',
 };
