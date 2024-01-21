@@ -50,7 +50,7 @@ export const authOptions: AuthOptions = {
       },
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_URL,
   pages: {
     signIn: '/login',
   },
