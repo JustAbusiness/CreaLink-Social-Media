@@ -1,18 +1,18 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import homeIcon from '../../../public/assets/icons/Home Icon.svg';
-import searchIcon from '../../../public/assets/icons/Search Icon.svg';
-import heartIcon from '../../../public/assets/icons/Heart Icon.svg';
-// import messageIcon from '@/public/assets/icons/Message Icon.svg';
-import notificationIcon from '../../../public/assets/icons/Notification Icon.svg';
-import userIcon from '../../../public/assets/icons/User Icon.svg';
+// import homeIcon from '../../../public/assets/icons/Home Icon.svg';
+// import searchIcon from '../../../public/assets/icons/Search Icon.svg';
+// import heartIcon from '../../../public/assets/icons/Heart Icon.svg';
+// import notificationIcon from '../../../public/assets/icons/Notification Icon.svg';
+// import userIcon from '../../../public/assets/icons/User Icon.svg';
+import { HomeOutlined, SearchOutlined, HeartOutlined, BellOutlined, UserOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 
 function Navbar() {
   const { data: session } = useSession();
-  const icons = [homeIcon, searchIcon, heartIcon, notificationIcon, userIcon];
+  const icons = [HomeOutlined, SearchOutlined, HeartOutlined, BellOutlined, UserOutlined];
   const hrefs = ['/home', '/search', '/favorites', '/notifications', '/profile'];
 
   // const hasNotifications = session?.user?.hasNotification;
