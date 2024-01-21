@@ -19,6 +19,7 @@
     import { Input } from '../ui/input';
     import { CopyIcon } from 'lucide-react';
     import ToggleLike, { handleLikeToggle } from './ToggleLike';
+import { EllipsisOutlined } from '@ant-design/icons';
     const { Dropdown, Menu, Flex } = require('antd');
     const { useSession } = require('next-auth/react');
     // import axios, { AxiosError } from 'axios';
@@ -360,11 +361,12 @@
                     <div className="dropdown-menu ml-2">
                         {/* Dropdown component */}
                         <Dropdown overlay={menu} placement="bottomRight">
-                        <img
+                        {/* <img
                             className="w-30 h-22 object-cover"
                             alt="Div margin"
-                            src="https:c.animaapp.com/n1QiTcNd/img/div-x146dn1l-margin-1.svg"
-                        />
+                            src="https:c.animaapp.com/n1QiTcNd/img/div-x146dn1l-margin-1.png"
+                        /> */}
+                        <EllipsisOutlined />
                         </Dropdown>
                     </div>
                     </div>
@@ -445,37 +447,6 @@
           </Form>
                 </Modal>
 
-                        <Dialog>
-                        <DialogTrigger asChild onClick={() => sharePost(post._id)}>
-                          <img
-                            className="w-[20px] h-[20px] top-[8px] left-[8px]"
-                            alt="Reshare icon"
-                            src="https://c.animaapp.com/n1QiTcNd/img/reshare-icon.svg"
-                          />
-                        </DialogTrigger>
-                        <DialogContent className="sm:max-w-md">
-                            <DialogHeader>
-                            <DialogTitle>Share link</DialogTitle>
-                            <DialogDescription>Anyone who has this link will be able to view this.</DialogDescription>
-                            </DialogHeader>
-                            <div className="flex items-center space-x-2">
-                            <div className="grid flex-1 gap-2">
-                                <Label className="sr-only">Link</Label>
-                                <Input id="link" defaultValue={shareableUrl || ''} readOnly />
-
-                            </div>
-                            {/* <Button style={{ background: '#a2383a', color: 'white' }} className="p-5">
-                                <span className="sr-only">Copy</span>
-                                <CopyIcon className="h-4 w-4" />
-                            </Button> */}
-                            </div>
-                            <DialogFooter className="sm:justify-start">
-                            <DialogClose asChild>
-                                <Button style={{ background: '#a2383a', color: 'white' }}>Close</Button>
-                            </DialogClose>
-                            </DialogFooter>
-                        </DialogContent>
-                        </Dialog>
                     </div>
 
                     {/* Post Footer */}
