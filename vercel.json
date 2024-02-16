@@ -1,8 +1,0 @@
-{
-    "functions": {
-      "api/*": {
-        "maxHttpHeaderSize": 12800000 
-      }
-    }
-  }
-  
